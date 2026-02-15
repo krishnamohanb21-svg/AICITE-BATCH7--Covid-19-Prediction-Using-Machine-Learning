@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COVID-19 Prediction</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Times New Roman", sans-serif;
+
+            /* Full Background Image */
+            background: url("{{ url_for('static', filename='images/Covid.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9); /* Transparent white */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px black;
+            width: 650px;
+        }
+
+        h2, p {
+            text-align: center;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 20px;
+            margin-top: 20px;
+        }
+
+        .form-grid label {
+            font-size: 14px;
+        }
+
+        .form-grid input {
+            width: 100%;
+            padding: 6px;
+        }
+
+        .button-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 25px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>COVID-19 Prediction System</h2>
+<p>Enter 1 = Yes, 0 = No</p>
+
+<form action="/predict" method="post">
+
+<div class="form-grid">
+
+<label>Breathing Problem</label>
+<input type="number" name="breathing_problem" required>
+
+<label>Fever</label>
+<input type="number" name="fever" required>
+
+<label>Dry Cough</label>
+<input type="number" name="dry_cough" required>
+
+<label>Sore Throat</label>
+<input type="number" name="sore_throat" required>
+
+<label>Running Nose</label>
+<input type="number" name="running_nose" required>
+
+<label>Asthma</label>
+<input type="number" name="asthma" required>
+
+<label>Chronic Lung Disease</label>
+<input type="number" name="chronic_lung" required>
+
+<label>Headache</label>
+<input type="number" name="headache" required>
+
+<label>Heart Disease</label>
+<input type="number" name="heart_disease" required>
+
+<label>Diabetes</label>
+<input type="number" name="diabetes" required>
+
+<label>Hypertension</label>
+<input type="number" name="hypertension" required>
+
+<label>Fatigue</label>
+<input type="number" name="fatigue" required>
+
+<label>Gastrointestinal</label>
+<input type="number" name="gastrointestinal" required>
+
+<label>Abroad Travel</label>
+<input type="number" name="abroad_travel" required>
+
+<label>Contact with COVID Patient</label>
+<input type="number" name="contact_covid" required>
+
+<label>Attended Large Gathering</label>
+<input type="number" name="large_gathering" required>
+
+<label>Public Places</label>
+<input type="number" name="public_places" required>
+
+<label>Family Public Exposure</label>
+<input type="number" name="family_public" required>
+
+<label>Wearing Masks</label>
+<input type="number" name="wearing_masks" required>
+
+<label>Sanitization from Market</label>
+<input type="number" name="sanitization" required>
+
+</div>
+
+<div class="button-center">
+    <input type="submit" value="Predict">
+</div>
+
+</form>
+
+<h3 style="text-align:center; margin-top:20px;">
+    {{ prediction_text }}
+</h3>
+
+</div>
+
+</body>
+</html>
+
