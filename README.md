@@ -139,6 +139,7 @@ with constant β0 ,coefficients β j and predictors X j , for p  predictors(j=1,
 The process of modeling the probability of a discrete outcome given an input variable is known as the Logistic Regression. The most common logistic regression, as its name suggests is not regression rather it is a classification algorithm that classifies something that can take two values such as true/false, yes/no, and so on. Logistic regression identifies a hyperplane in a manner that when it is passes through a function whose value ranges between 0 and 1 (typically we use sigmoidal), it optimizes cost function. Bases on closeness to 0 or 1, it predicts a Boolean output. Here vector parameters is used for training. σ(.) is usually a sigmoid function, with output between 0 and 1.
 
 # Features of Logistic Regression
+
 Multinomial logistic regression is the type of regression which uses the softmax function to compute probabilities.
 ● We use loss function to learn weights(vector w and bias b) from a labeled training. we perform such activity to minimize the cross-entropy loss.
 ● Iterative algos like gradient descent are used to get the weight(optimal).while minimizing the loss function the type of convex optimization problem.
@@ -146,6 +147,7 @@ Multinomial logistic regression is the type of regression which uses the softmax
 ● Logistic regression has the ability to transparently study the importance of individual features.
 
 # Advantages  and Disadvantages of Logistic Regression 
+
 Advantages 
 ● This technique is perform well and fast where we have to classify unknown records.
 ● This is not limited to binary classification we can easily extend it to  multinomial regression.
@@ -178,7 +180,7 @@ A Random Forest Classifier is a method of ensemble learning applied to classific
 ●	It runs Efficiently in scenarios where database is very huge.
 ●	We can perform classification on Thousands of Input variables.
 ●	Using this we can find which variable is useful for our classification.
-●Using this we can easily calculate the missing data and also maintain the good accuracy. Even though it has missing data.
+● Using this we can easily calculate the missing data and also maintain the good accuracy. Even though it has missing data.
 
 <img width="1973" height="998" alt="image" src="https://github.com/user-attachments/assets/ff8cc1c8-ebd3-4fb3-9d3e-7487186f416a" />
 <img width="845" height="714" alt="image" src="https://github.com/user-attachments/assets/c62b33f9-c9dd-4f5d-9f2d-a0557374bd94" />
@@ -187,7 +189,8 @@ Accuracy 97.52 %
 
 # Support Vector Machine 
 Support Vector Machine (SVM) is a supervised machine learning algorithm used for classification and regression tasks. It works by finding the optimal hyperplane that best separates data into different classes. The main goal of SVM is to maximize the margin between different classes while minimizing classification error.
-Features of SVM 
+
+# Features of SVM 
 1.Margin Maximization: SVM finds the hyperplane that maximizes the margin between classes, which helps improve generalization and robustness.
 2.Support Vectors: Only a few important data points (called support vectors) are used to define the hyperplane, making the model efficient.
 3.Effective in High Dimensions: SVM performs well even when the number of features is very large (high-dimensional spaces).
